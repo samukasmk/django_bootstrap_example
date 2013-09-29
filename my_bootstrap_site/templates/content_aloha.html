@@ -14,22 +14,32 @@
         {% endif %}
 
         {% if name == 'Heisenberg' %}
-        <img src="{{ STATIC_URL }}my_images/heisenberg.png" alt="Smiley face">
+          <img src="{{ STATIC_URL }}my_images/heisenberg.png" alt="Smiley face">
+          
+          <p>Put Your name Here to! :</p>
+          <a href="<b>http://{{ BASE_URL }}/site/say_my_name/PutYouNameHere"><b>http://{{ BASE_URL }}/site/say_my_name/PutYouNameHere</b></a>
 
-        
-        <p>Put Your name Here to! :</p>
-        <a href="<b>http://{{ BASE_URL }}/site/say_my_name/PutYouNameHere"><b>http://{{ BASE_URL }}/site/say_my_name/PutYouNameHere</b></a>
+          <p>Heisenberg is the smartest bad ever <b>Guy!</b></p>
 
-        <p>&nbsp;</p>
-        <p>Hey Heisenberg, you are a smartest bad <b>Guy!</b></p>
         {% elif gender == 'male' %}
-        <p>You are a smart <b>Guy for come up Here!</b></p>
+
+          <p>You are a smart <b>Guy for come up Here!</b></p>
+
         {% elif gender == 'female' %}
-        <p>You are lovely <b>Hot Chick, congrats for coming Here!</b></p>
+
+          <p>You are lovely <b>Hot Chick, congrats for coming Here!</b></p>
+
         {%endif%}
 
         <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+
+        {% if name != 'Heisenberg' %}
+        <p>Follow the Last Example: <b>Heisenberg!</b> &nbsp; -> &nbsp;
+        <a href="{{ BASE_URL }}/site/say_my_name"><b>http://{{ BASE_URL }}/site/say_my_name</b></a></p>
+        {% endif %}
+
         <p><a href="https://github.com/samukasmk/django_bootstrap_example" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
       </div>
     </div>
     
@@ -70,6 +80,4 @@
 
     </div> <!-- /container -->
 
-
-{% debug %}
 {% endblock %}

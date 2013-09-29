@@ -17,3 +17,4 @@ def SayMyName(request, called_name = None):
 	else:
 
 		return redirect('/site/say_my_name/Heisenberg')
+

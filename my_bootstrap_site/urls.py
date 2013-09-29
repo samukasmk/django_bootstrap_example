@@ -14,9 +14,12 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'home', 'my_bootstrap_site.views.Home'),
+
+    url(r'^/$', 'my_bootstrap_site.views.Home'),
+
+    url(r'home$', 'my_bootstrap_site.views.Home'),
 
 	url(r'say_my_name[/]$', 'my_bootstrap_site.views.SayMyName'),
 
-	url(r'say_my_name/(?P<called_name>\w+)', 'my_bootstrap_site.views.SayMyName'),
+	url(r'say_my_name/(?P<called_name>\w+)$', 'my_bootstrap_site.views.SayMyName'),
 )
