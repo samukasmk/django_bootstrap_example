@@ -12,7 +12,7 @@ def SayMyName(request, called_name = None):
 
 	if called_name != None:
 
-		return render(request, 'content_aloha.html', { 'name': called_name, 'gender': 'male'})
+		return render(request, 'content_aloha.html', { 'name': called_name, 'gender': 'male', 'BASE_URL': request.get_host() })
 
 	else:
 

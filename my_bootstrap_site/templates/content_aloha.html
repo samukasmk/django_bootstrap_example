@@ -3,7 +3,6 @@
 {% block title %}My amazing blog{% endblock %}
       
 {% block container_content %}
-
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
@@ -16,6 +15,12 @@
 
         {% if name == 'Heisenberg' %}
         <img src="{{ STATIC_URL }}my_images/heisenberg.png" alt="Smiley face">
+
+        
+        <p>Put Your name Here to! :</p>
+        <a href="<b>http://{{ BASE_URL }}/site/say_my_name/PutYouNameHere"><b>http://{{ BASE_URL }}/site/say_my_name/PutYouNameHere</b></a>
+
+        <p>&nbsp;</p>
         <p>Hey Heisenberg, you are a smartest bad <b>Guy!</b></p>
         {% elif gender == 'male' %}
         <p>You are a smart <b>Guy for come up Here!</b></p>
@@ -65,4 +70,6 @@
 
     </div> <!-- /container -->
 
+
+{% debug %}
 {% endblock %}
